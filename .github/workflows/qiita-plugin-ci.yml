@@ -49,7 +49,7 @@ jobs:
           echo "Testing: " $COVER_PACKAGE
 
           # we need to download qiita directly so we have "easy" access to
-          # all config files
+          # all configuration files
           wget https://github.com/biocore/qiita/archive/dev.zip
           unzip dev.zip
 
