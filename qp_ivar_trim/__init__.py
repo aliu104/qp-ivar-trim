@@ -39,8 +39,8 @@ for db in dbs_without_extension:
     name = f'auto-detect adapters and {db} + phix filtering'
     default_params[name] = {'primer': db, 'threads': THREADS}
 
-IVAR_TRIM_cmd = QiitaCommand(
+ivar_trim_cmd = QiitaCommand(
     'Trim reads in aligned BAM ', "",
     ivar_trim, req_params, opt_params, outputs, default_params)
 # i have no idea what to put here :) ^^^^
-plugin.register_command(IVAR_TRIM_cmd)
+plugin.register_command(ivar_trim_cmd)

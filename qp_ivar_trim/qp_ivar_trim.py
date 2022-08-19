@@ -59,27 +59,14 @@ def _generate_commands(bam_file, primer, nprocs, out_dir):
     """Helper function to generate commands and facilite testing"""
     files = bam_file
     cmd = IVAR_TRIM_CMD
-#        if database is not None:
-#            cmd = COMBINED_CMD
-#    else:
-#        cmd =_CMD_SINGLE
-#        if database is not None:
-#            cmd = COMBINED_CMD_SINGLE
     command = cmd.format(nprocs=nprocs, primer=primer, out_dir=out_dir)
-
     out_files = []
     commands = []
     for bam_file in files:
         fname = basename(bam_file)
         out_files.append((f'{out_dir}/{fname}',
                          'trimmed'))  # might be trimmed
-#        if rev_fp:
-#            rname = basename(rev_fp)
-#            out_files.append((f'{out_dir}/{rname}',
-#            'raw_reverse_seqs'))
-#            cmd = command % (fwd_fp, rev_fp, fname, rname)
-#        else:
-        cmd = command % (fname)
+        cmd = command % (bam_file, fname)
         commands.append(cmd)
 
     return commands, out_files
