@@ -7,9 +7,9 @@
 # -----------------------------------------------------------------------------
 from unittest import main
 from qiita_client.testing import PluginTestCase
-from os import remove # , environ
-from os.path import exists, isdir # , join
-from shutil import rmtree # , copyfile
+from os import remove  # , environ
+from os.path import exists, isdir  # , join
+from shutil import rmtree  # , copyfile
 from tempfile import mkdtemp
 # from json import dumps
 # from functools import partial
