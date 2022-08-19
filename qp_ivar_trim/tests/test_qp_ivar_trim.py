@@ -7,18 +7,18 @@
 # -----------------------------------------------------------------------------
 from unittest import main
 from qiita_client.testing import PluginTestCase
-from os import remove, environ
-from os.path import exists, isdir, join
-from shutil import rmtree, copyfile
+from os import remove # , environ
+from os.path import exists, isdir # , join
+from shutil import rmtree # , copyfile
 from tempfile import mkdtemp
-from json import dumps
-from functools import partial
+# from json import dumps
+# from functools import partial
 
 from qp_ivar_trim import plugin
-from qp_ivar_trim.utils import plugin_details
+# from qp_ivar_trim.utils import plugin_details
 from qp_ivar_trim.qp_ivar_trim import (
     get_dbs_list, _generate_commands,
-    ivar_trim_to_array, QC_REFERENCE, IVAR_TRIM_CMD)
+    QC_REFERENCE, IVAR_TRIM_CMD)
 
 
 class IvarTrimTests(PluginTestCase):
