@@ -12,7 +12,6 @@ from os.path import exists, isdir, join
 from shutil import rmtree, copyfile
 from tempfile import mkdtemp
 from json import dumps
-from itertools import zip_longest
 from functools import partial
 
 from qp_ivar_trim import plugin
@@ -367,4 +366,4 @@ def test_fastp_minimap2_just_fwd(self):
 '''
 
 if __name__ == '__main__':
-            main()
+    main()
